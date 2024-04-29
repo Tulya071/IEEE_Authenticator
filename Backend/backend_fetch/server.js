@@ -11,8 +11,8 @@ app.use(express.json());
 app.use(cors());
 
 // MongoDB Atlas connection string
-const mongoURI = 'mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/';
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+const mongoURI = 'mongodb://localhost:27017/IEEE';
+mongoose.connect(mongoURI);
 
 const connection = mongoose.connection;
 connection.once('open', () => {
