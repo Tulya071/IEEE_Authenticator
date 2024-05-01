@@ -4,13 +4,13 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 5003;
+const PORT = process.env.PORT || 5210;
 
 app.use(express.json());
 app.use(cors());
 
 // MongoDB Atlas connection string
-const mongoURI = 'mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/';
+const mongoURI = 'mongodb://localhost:27017/IEEE';
 mongoose.connect(mongoURI);
 
 const connection = mongoose.connection;

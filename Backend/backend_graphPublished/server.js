@@ -8,10 +8,7 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect('mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/IEEE');
 
 const PublishedPaper = mongoose.model('PublishedPaper', {
   code: String,
@@ -43,7 +40,7 @@ app.get('/api/published-papers', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5402;
+const PORT = process.env.PORT || 5202;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });

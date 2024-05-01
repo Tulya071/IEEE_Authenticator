@@ -27,7 +27,7 @@ const Tables = () => {
     const fetchPaperData = async () => {
       try {
         // Fetch paper data from the backend
-        const response = await axios.get('http://192.168.1.211:5001/api/review'); // Update the URL with your backend URL
+        const response = await axios.get('http://localhost:5209/api/review'); // Update the URL with your backend URL
         setPapersData(response.data);
       } catch (error) {
         console.error('Error fetching paper data:', error.message);

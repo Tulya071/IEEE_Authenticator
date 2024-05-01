@@ -13,7 +13,7 @@ const Header = () => {
     // Fetch data from MongoDB Atlas
     const fetchData = async () => {
       try {
-        const response = await axios.get('http://192.168.1.211:5200/api/documents/count');
+        const response = await axios.get('http://localhost:5200/api/documents/count');
         const data = response.data;
 
         // Update state with the fetched data

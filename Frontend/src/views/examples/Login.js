@@ -32,7 +32,7 @@ const Login = () => {
     const handleLoginButtonClick =async () => {
       try {
         // Make a request to the authentication endpoint
-        const response = await fetch('http://192.168.1.211:5050/api/authenticate', {
+        const response = await fetch('http://localhost:5203/api/authenticate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

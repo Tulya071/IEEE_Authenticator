@@ -7,17 +7,14 @@ const bodyParser = require('body-parser');
 const cors = require('cors'); 
 
 const app = express();
-const PORT = process.env.PORT || 5052;
+const PORT = process.env.PORT || 5204;
 
 app.use(bodyParser.json());
 app.use(cors());
 
 
 mongoose
-  .connect('mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/', {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  })
+  .connect('mongodb://localhost:27017/IEEE')
   .then(() => {
     console.log('MongoDB connected');
   })

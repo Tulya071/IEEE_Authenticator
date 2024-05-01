@@ -2,13 +2,13 @@ const express = require('express');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const app = express();
-const PORT = 5001;
+const PORT = 5209;
 
 app.use(cors());
 app.use(express.json()); // Enable JSON parsing middleware
 
 // Connect to MongoDB
-mongoose.connect('mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/');
+mongoose.connect('mongodb://localhost:27017/IEEE');
 
 // Define the schema for the new collection
 const reviewDataSchema = new mongoose.Schema({

@@ -7,14 +7,14 @@ const cors = require('cors');
 const bodyParser = require('body-parser');
 const authController = require('./authController');
 const app = express();
-const PORT = process.env.PORT || 5051; // Choose a different port
+const PORT = process.env.PORT || 5205; // Choose a different port
 
 app.use(bodyParser.json());
 app.use(cors()); // Enable CORS for all routes
 
 // Connect to MongoDB
 mongoose
-  .connect('mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/')
+  .connect('mongodb://localhost:27017/IEEE')
   .then(() => {
     console.log('MongoDB connected');
   })

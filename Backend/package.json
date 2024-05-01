@@ -7,7 +7,7 @@
       "start": "npm-run-all -p start:*",
       "start:fetch": "node backend_fetch/server.js",
       "start:graph": "node backend_graph/server.js",
-      "start:login": "node backend_login/server.js",
+      "start:login": "node backend_User_login/server.js",
       "start:user": "node backend_user/server.js",
       "start:admin": "node Backend-Admin/server.js",
       "start:register": "node Backend-Register/server.js",

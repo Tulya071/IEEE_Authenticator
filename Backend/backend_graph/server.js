@@ -5,16 +5,13 @@ const cors = require('cors');
 const UserModel = require('./userModel');
 
 const app = express();
-const PORT = process.env.PORT || 5401;
+const PORT = process.env.PORT || 5201;
 
 app.use(express.json());
 app.use(cors());
 
 // Connect to MongoDB (replace YOUR_MONGODB_URI with your actual MongoDB URI)
-mongoose.connect('mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect('mongodb://localhost:27017/IEEE');
 
 // Check connection
 const db = mongoose.connection;

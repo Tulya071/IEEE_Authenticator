@@ -66,7 +66,7 @@ const Register = () => {
   
       // Send a POST request to the backend with URLSearchParams
       const response = await axios.post(
-        'http://192.168.1.211:5000/api/users/register',
+        'http://localhost:5208/api/users/register',
         params,
         {
           headers: {

@@ -3,14 +3,14 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 
 const app = express();
-const port = 5002;
+const port = 5207;
 
 // Middleware
 app.use(cors());
 app.use(express.json());
 
 // MongoDB Connection
-mongoose.connect('mongodb+srv://ayush:apmosys%40123@userdetails.fksmxge.mongodb.net/');
+mongoose.connect('mongodb://localhost:27017/IEEE');
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:'));

@@ -33,7 +33,7 @@ import {
   
     const handleLoginButtonClick =async () => {
       try {
-        const response = await fetch("http://192.168.1.211:5052/api/authenticate", {
+        const response = await fetch("http://localhost:5052/api/authenticate", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",

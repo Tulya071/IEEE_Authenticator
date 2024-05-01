@@ -59,7 +59,7 @@ const Profile = ({ name, email }) => {
   //new
   const fetchStatusAndScore = async (userCode) => {
     try {
-      const response = await axios.get(`http://192.168.1.211:5100/api/documents/${userCode}`);
+      const response = await axios.get(`http://localhost:5100/api/documents/${userCode}`);
       const data = response.data;
 
       // Assuming the API response contains a single document for the user

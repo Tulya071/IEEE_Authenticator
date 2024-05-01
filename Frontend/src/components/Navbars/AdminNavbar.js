@@ -26,7 +26,7 @@ const AdminNavbar = (props) => {
   const handleSearch = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.get(`http://192.168.1.211:5003/api/search/${searchValue}`);
+      const response = await axios.get(`http://localhost:5210/api/search/${searchValue}`);
   
       if (response.data.length > 0) {
         const { code, status, score } = response.data[0];
