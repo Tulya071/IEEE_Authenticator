@@ -174,10 +174,10 @@ const Profile = ({ name, email }) => {
                   </div>
                   <hr className="my-4" />
                   <p>
-                    "An insightful exploration of Machine Learning Algorithms that offers a fresh perspective, comprehensive analysis, and valuable contributions to the existing body of knowledge in the field."
+                    IEEE is the world's largest technical professional organization dedicated to advancing technology for the benefit of humanity. IEEE and its members inspire a global community through its highly cited publications, conferences, technology standards, and professional and educational activities.
                   </p>
-                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                    Show Reviews
+                  <a href="https://www.ieee.org/about/">
+                  Link to IEEE About Page
                   </a>
                 </div>
               </CardBody>
