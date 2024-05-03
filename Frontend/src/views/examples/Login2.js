@@ -25,7 +25,7 @@ import {
     const handleLoginButtonClick =async () => {
       try {
         // Make a request to the authentication endpoint
-        const response = await fetch('http://localhost:5051/api/authenticate', {
+        const response = await fetch('http://localhost:5205/api/authenticate', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

@@ -46,7 +46,7 @@ function Index() {
     // </div>
     <Col lg="5" md="10">
       <Card className="bg-secondary shadow border-0">
-        <CardBody className="px-lg-5 py-lg-5">
+        <CardBody className="px-lg-5 py-lg-5" style={{backgroundImage:'url("assets\img\theme\team-4-800x800.jpg")'}}>
           <div className="text-center text-muted mb-4">
             <big>Select Your Role</big>
             <div className="text-center">

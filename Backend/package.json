@@ -12,7 +12,10 @@
       "start:admin": "node Backend-Admin/server.js",
       "start:register": "node Backend-Register/server.js",
       "start:reviewer": "node Backend-Reviewer/server.js",
-      "start:search": "node Backend-search/server.js"
+      "start:search": "node Backend-search/server.js",
+      "start:reviewerlogin": "node backend_Reviewer_login",
+      "start:graphpublished": "node backend_graphpublished",
+      "start:admin_login": "node backend_admin_login"
     },
     "author": "Your Name",
     "license": "MIT",
