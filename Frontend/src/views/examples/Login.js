@@ -42,7 +42,6 @@ const Login = () => {
         });
   
         const data = await response.json();
-  
         if (data.success) {
           // Authentication successful, navigate to the desired page
           navigate("/admin/user-profile",{ state: { userCode: code, useremail: email} });

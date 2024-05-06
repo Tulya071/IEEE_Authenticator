@@ -189,7 +189,7 @@ const Register = () => {
 
             {code && (
               <div className="text-center mt-3">
-                <strong>Your Application Code:</strong> {code}. Keep your Application Number for future logins.
+                <strong>Your Application Code:</strong> {code}. Keep your Application Number for future reference.
               </div>
             )}
             <div className="text-center">

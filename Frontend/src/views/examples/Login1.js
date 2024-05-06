@@ -40,7 +40,6 @@ import {
           },
           body: JSON.stringify({ emailRev, passwordRev }),
         });
-  
         if (response.ok) {
           // Authentication successful, redirect or perform other actions
           navigate("/admin/reviewer");
