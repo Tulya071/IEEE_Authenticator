@@ -271,13 +271,15 @@ const Admin_Das = (props) => {
                         <td>{update.code}</td>
                         <td>{update.sector}</td>
                         <td>
-                          <Button
-                            color="success"
-                            className="mr-2"
-                            onClick={() => handleApprove(update.code)}
-                          >
-                            <i className="fas fa-check" />
-                          </Button>
+                        <Button
+                         color="success"
+                         className="mr-2"
+                         onClick={() => handleApprove(update.code)}
+                         disabled={update.score <= 5} // Disable button when score is not greater than 5
+                         style={{ cursor: update.score <= 5 ? 'not-allowed' : 'pointer' }} // Change cursor style when disabled
+                         >
+                          <i className="fas fa-check" />
+                        </Button>
                           <Button
                             color="danger"
                             onClick={() => handleDisapprove(update.code)}

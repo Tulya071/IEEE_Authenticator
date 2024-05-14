@@ -97,7 +97,9 @@ import {
             {/* </CardHeader> */}
             <CardBody className="px-lg-5 py-lg-5">
               <div className="text-center text-muted mb-4">
-                <big>Sign in with credentials</big>
+                <big>Hello admin!</big>
+                <br></br>
+                <big>Log in with credentials</big>
               </div>
               <Form role="form">
                 <FormGroup className="mb-3">

@@ -68,7 +68,10 @@ app.post('/api/review', async (req, res) => {
     // Update score, comments, and set status to "1st round over" in the original collection
     reviewer.comments = comments;
     reviewer.score = score;
-    reviewer.status = '1st round over'; // Set default status
+    if(score>=5)
+     reviewer.status = 'Passed Review'; // Set default status
+    else
+     reviewer.status = 'Resubmission';
     reviewer.sector = sector; // Set the sector
 
     // Save the updated reviewer document
@@ -79,14 +82,14 @@ app.post('/api/review', async (req, res) => {
       code, // Include the application number
       comments,
       score,
-      status: '1st round over', // Set default status
+      status: score>=5?'Passed Review':'Under Review', // Set default status
       sector,
     };
 
     // Assuming 'ReviewData' is the model for the new collection
     await ReviewData.create(newReviewData);
 
-    res.json({ success: true, code, comments, score, status: '1st round over', sector });
+    res.json({ success: true, code, comments, score, status: 'Under', sector });
   } catch (error) {
     console.error('Error updating review data:', error.message);
     res.status(500).json({ error: 'Internal Server Error' });

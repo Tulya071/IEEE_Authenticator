@@ -66,7 +66,7 @@ const submitReview = async (code) => {
         code: code,
         comments: comments[code] || '',
         score: scores[code] || 0,
-        status: '1st Round Over',
+        status: scores[code]>=5?'Passed Review':'Under Review',
       });
 
      

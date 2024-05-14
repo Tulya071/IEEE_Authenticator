@@ -66,7 +66,7 @@ const Tables = () => {
         comments: comments[code] || '',
         score: scores[code] || 0,
         sector: sector, // Include the sector in the request payload
-        status: '1st Round Over',
+        status: scores[code]>=5?'Passed Review':'Under Review',
       });
       console.log("from reviewer");
 

@@ -104,6 +104,8 @@ const Login = () => {
           {/* </CardHeader> */}
           <CardBody className="px-lg-5 py-lg-5">
             <div className="text-center text-muted mb-4">
+              <big>Hello author!</big>
+              <br></br>
               <big>Sign in with credentials</big>
             </div>
             <Form role="form">

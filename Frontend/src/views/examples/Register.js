@@ -50,6 +50,17 @@ const Register = () => {
       console.error('All fields are required.');
       return;
     }
+
+    //for mail
+    try {
+      const response = await axios.post('http://localhost:5211/send-email', {
+        email: formData.email,
+        code: formData.code
+      });
+      console.log('Email sent successfully:', response.data);
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
   
     try {
       // Generate a new alphanumeric code

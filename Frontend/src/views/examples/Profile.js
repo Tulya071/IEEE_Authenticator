@@ -28,6 +28,7 @@ import UserHeader from "components/Headers/UserHeader.js";
 const Profile = ({ name, email }) => {
   const location = useLocation();
   const { state } = location;
+  let userNameToHeader 
   //new
   const [documents, setDocuments] = useState([]);
 
@@ -53,6 +54,8 @@ const Profile = ({ name, email }) => {
         code: state.userCode,
         email: state.useremail
       });
+      userNameToHeader=state.userCode
+      console.log(userNameToHeader);
       fetchStatusAndScore(state.userCode);
     }
   }, [state]);
@@ -87,15 +90,14 @@ const Profile = ({ name, email }) => {
   };
 
   const document = [
-    { id: 'WtadQgLfUhV0M5zN', progress: 60 },
-    // { id: '4534ERTP7809', progress: 40 },
-    // { id: '4533ERTP6789', progress: 20 },
+    { id: formData.code, progress: formData.score * 10 }
   ];
+  console.log(formData.email,formData.code,"profile.js");
 
 
   return (
     <>
-      <UserHeader />
+      <UserHeader userName={formData.code} userEmail={formData.email}/>
       {/* Page content */}
       <Container className="mt--7" fluid>
         <Row>
@@ -166,7 +168,7 @@ const Profile = ({ name, email }) => {
                   </div>
                   <div className="h5 mt-4">
                     <i className="ni business_briefcase-24 mr-2" />
-                    {formData.city}- {formData.postalCode}
+                    {formData.city} - {formData.postalCode}
                   </div>
                   <div>
                     <i className="ni education_hat mr-2" />
@@ -346,18 +348,7 @@ const Profile = ({ name, email }) => {
               )} */}
 
 
-                              {doc.progress < 40 ? (
-                                <Button color="primary" onClick={() => window.location.href = "/auth/camera"}>
-                                  Camera Ready Submission
-                                </Button>
-                              ) : doc.progress < 60 ? (
-                                <Button color="primary" onClick={() => window.location.href = "/auth/ppt"}>
-                                  PPT and Presentation Submission
-                                </Button>
-                              ) : (
-                                /* For progress >= 60%, no action needed */
-                                null
-                              )}
+                              {/* for resubmission */}
                             </td>
 
                           </tr>
