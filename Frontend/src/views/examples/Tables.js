@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import {
-  
+import { 
   Card,
   CardHeader,
-  
   DropdownMenu,
   DropdownItem,
   UncontrolledDropdown,
@@ -63,14 +61,15 @@ const Tables = () => {
       console.log('Score:', scores[code] || 0);
       console.log('Sector:', sector);
   
-      const response = await axios.post('http://192.168.1.211:5001/api/review', {
+      const response = await axios.post('http://localhost:5209/api/review', {
         code: code,
         comments: comments[code] || '',
         score: scores[code] || 0,
         sector: sector, // Include the sector in the request payload
         status: '1st Round Over',
       });
-  
+      console.log("from reviewer");
+
       setPapersData((prevPapersData) => prevPapersData.filter((paper) => paper.code !== code));
   
       // Handle success or show error messages

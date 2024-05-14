@@ -59,7 +59,7 @@ const Profile = ({ name, email }) => {
   //new
   const fetchStatusAndScore = async (userCode) => {
     try {
-      const response = await axios.get(`http://localhost:5100/api/documents/${userCode}`);
+      const response = await axios.get(`http://localhost:5206/api/documents/${userCode}`);
       const data = response.data;
 
       // Assuming the API response contains a single document for the user
@@ -87,9 +87,9 @@ const Profile = ({ name, email }) => {
   };
 
   const document = [
-    { id: '5679ERTP6789', progress: 60 },
-    { id: '4534ERTP7809', progress: 40 },
-    { id: '4533ERTP6789', progress: 20 },
+    { id: 'WtadQgLfUhV0M5zN', progress: 60 },
+    // { id: '4534ERTP7809', progress: 40 },
+    // { id: '4533ERTP6789', progress: 20 },
   ];
 
 

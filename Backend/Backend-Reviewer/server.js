@@ -35,6 +35,7 @@ const reviewerSchema = new mongoose.Schema({
 const Reviewer = mongoose.model('Reviewer', reviewerSchema);
 
 app.get('/api/review', async (req, res) => {
+  console.log(req.query,"request is here");
   try {
     const { status } = req.query;
 
@@ -42,7 +43,7 @@ app.get('/api/review', async (req, res) => {
     const query = status === null && status === undefined ? {} : { status };
     
     // Fetch code, driveLink, status, and sector from MongoDB based on the provided query
-    const reviewData = await Reviewer.find(query, 'code driveLink status sector');
+    const reviewData = await Reviewer.find();
     res.json(reviewData);
   } catch (error) {
     console.error('Error fetching review data:', error.message);

@@ -59,7 +59,7 @@ const AdminNavbar = (props) => {
                   </InputGroupText>
                 </InputGroupAddon>
                 <Input
-        placeholder="Search By Application Number"
+        placeholder="Search by Application Number"
         type="text"
         value={searchValue}
         onChange={(e) => setSearchValue(e.target.value)}  

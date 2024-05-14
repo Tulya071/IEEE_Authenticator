@@ -1,1 +1,5 @@
-Backend-register---Working
+reviewdatas: the collection used in admin dashboard for displaying the two graphs and recent updates column.
+
+reviewers: the collection used to display the table of the reviewer dashboard
+
+reviewdatas: it also is responsible for showing the counts of various fields in the reviewer section

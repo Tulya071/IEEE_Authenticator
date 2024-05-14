@@ -1,0 +1,4 @@
+[1] Ouzzani, M., Hammady, H., Fedorowicz, Z. et al. Rayyan—a web and mobile app for systematic reviews. Syst Rev 5, 210 (2016). https://doi.org/10.1186/s13643-016-0384-4
+
+[2] SA Fatumo,JO Daramola,CK Ayo Oct 14, 2008 Conference management paper submission paper assignment web-based development reviewers\' ranking ACM Classification H.3.5 (Web-based services) 10.4314/gjpas.v14i3.16820
+

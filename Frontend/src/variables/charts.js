@@ -325,7 +325,7 @@ let chartExample1 = {
   },
   data1: (canvas) => {
     return {
-      labels: ["Aerospace", "BioEngg", "CommEngg", "Photonics", "Radar", "Robotics", "Circuits", "GeoSc."],
+      labels: ["Aerospace", "Bio Engineering", "Computer Science", "Photonics", "Radar", "Robotics", "Circuits", "Geo Science."],
       datasets: [
         {
           label: "Performance",
@@ -336,7 +336,7 @@ let chartExample1 = {
   },
   data2: (canvas) => {
     return {
-      labels: ["Aerospace", "BioEngg", "CommEngg", "Photonics", "Radar", "Robotics", "Circuits", "GeoSc."],
+      labels: ["Aerospace", "Bio Engineering", "Computer Science", "Photonics", "Radar", "Robotics", "Circuits", "Geo Science."],
       datasets: [
         {
           label: "Published",
@@ -380,7 +380,7 @@ let chartExample2 = {
     },
   },
   data: {
-    labels: ["Aerospace", "BioEngg", "CommEngg", "Photonics", "Radar", "Robotics", "Circuits", "GeoSc."],
+    labels: ["Aerospace", "Bio Engineering", "Computer Science", "Photonics", "Radar", "Robotics", "Circuits", "Geo Science."],
     datasets: [
       {
         label: "Submissions",

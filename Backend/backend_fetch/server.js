@@ -33,9 +33,9 @@ const ReviewData = mongoose.model('ReviewData', reviewDataSchema);
 app.get('/api/documents/count', async (req, res) => {
   try {
     const totalCount = await ReviewData.countDocuments();
-    const toBeReviewedCount = await ReviewData.countDocuments({ status: '1st round over' });
-    const publishedCount = await ReviewData.countDocuments({ status: 'published' });
-    const toBePublishedCount = await ReviewData.countDocuments({ status: '1st round over' });
+    const toBeReviewedCount = await ReviewData.countDocuments({ status: 'Pending' });
+    const publishedCount = await ReviewData.countDocuments({ status: 'Published' });
+    const toBePublishedCount = await ReviewData.countDocuments({ status: 'In Progress' });
 
     res.json({
       totalCount,

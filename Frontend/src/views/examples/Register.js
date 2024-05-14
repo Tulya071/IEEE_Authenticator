@@ -170,13 +170,13 @@ const Register = () => {
                   >
                     <option value="" disabled>Select Research Sector</option>
                     <option value="Aerospace">Aerospace</option>
-                    <option value="BioEngg">BioEngg</option>
-                    <option value="commEngg">commEngg</option>
+                    <option value="Bio Engineering">Bio Engineering</option>
+                    <option value="Computer Science">Computer Science</option>
                     <option value="Photonics">Photonics</option>
                     <option value="Radar">Radar</option>
                     <option value="Robotics">Robotics</option>
                     <option value="Circuits">Circuits</option>
-                    <option value="GeoSc">GeoSc</option>
+                    <option value="Geo Science">Geo Science</option>
                   </Input>
                 </InputGroup>
               </FormGroup>

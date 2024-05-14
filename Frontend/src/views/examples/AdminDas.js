@@ -42,7 +42,7 @@ const Admin_Das = (props) => {
     try {
 
       const response = await axios.get(
-        "http://192.168.1.211:5002/api/review-updates"
+        "http://localhost:5207/api/review-updates"
       );
       setRecentUpdates(response.data);
     } catch (error) {
@@ -83,11 +83,11 @@ const Admin_Das = (props) => {
   //setting chart data for total sectors
   const fetchChartData = async () => {
     try {
-      const response = await axios.get("http://192.168.1.211:5401/api/unique-sectors");
+      const response = await axios.get("http://localhost:5201/api/unique-sectors");
       const data = response.data;
 
       // Include only specific sectors
-      const specificSectors = ["Aerospace", "BioEngg", "commEngg", "Photonics", "Radar", "Robotics", "Circuits", "GeoSc"];
+      const specificSectors = ["Aerospace", "Bio Engineering", "Computer Science", "Photonics", "Radar", "Robotics", "Circuits", "Geo Science"];
 
       // Filter out null values and include only specific sectors
       const filteredData = data.filter((item) => item._id !== null && specificSectors.includes(item._id));
@@ -134,7 +134,7 @@ const Admin_Das = (props) => {
     try {
       // Make an API call to update the status to "published"
       setApproveClicked(true);
-      await axios.put(`http://192.168.1.211:5002/api/update-status/${code}`, {
+      await axios.put(`http://localhost:5207/api/update-status/${code}`, {
         status: "published",
       });
       alert(code+"'s paper has been published");
@@ -168,7 +168,7 @@ const Admin_Das = (props) => {
       // Make an API call to update the status to "rejected"
       if (!approveClicked) {
         // Make an API call to update the status to "rejected"
-        await axios.put(`http://192.168.1.211:5002/api/update-status/${code}`, {
+        await axios.put(`http://localhost:5207/api/update-status/${code}`, {
           status: "rejected",
       });
 
@@ -258,7 +258,7 @@ const Admin_Das = (props) => {
                 <thead className="thead-light">
                   <tr>
                     <th scope="col">Application Code</th>
-                    <th scope="col">Username</th>
+                    <th scope="col">Sector</th>
                     
                     <th scope="col">Approve/Dis-approve</th>
                     <th scope="col">Current status</th>

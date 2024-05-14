@@ -28,7 +28,7 @@ const ReviewerCam = () => {
     const fetchPaperData = async () => {
       try {
         // Fetch paper data from the backend
-        const response = await axios.get('http://192.168.1.211:5001/api/review'); // Update the URL with your backend URL
+        const response = await axios.get('http://localhost:5209/api/review');
         setPapersData(response.data);
       } catch (error) {
         console.error('Error fetching paper data:', error.message);
@@ -62,7 +62,7 @@ const submitReview = async (code) => {
       console.log('Comments:', comments[code] || '');
       console.log('Score:', scores[code] || 0);
 
-      const response = await axios.post('http://192.168.1.211:5001/api/review', {
+      const response = await axios.post('http://localhost:5209/api/review', {
         code: code,
         comments: comments[code] || '',
         score: scores[code] || 0,
